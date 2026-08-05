@@ -1,6 +1,63 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* Remove the large image/gradient block above the About Sorelle text. */
+  // Remove the large image area above the About section.
   document.querySelector(".about-image")?.remove();
+
+  // Reduce only the requested headings to half of their original CSS sizes.
+  const reducedTitleStyle = document.createElement("style");
+  reducedTitleStyle.textContent = `
+    .sorelle-half-large-title {
+      font-size: clamp(1.85rem, 8.5vw, 3rem) !important;
+      line-height: 0.9 !important;
+    }
+
+    .sorelle-half-collection-title {
+      font-size: 1.45rem !important;
+      line-height: 1 !important;
+    }
+
+    .sorelle-half-product-title {
+      margin-bottom: 8px;
+      font-size: clamp(1rem, 4vw, 1.6rem) !important;
+      line-height: 1 !important;
+    }
+  `;
+  document.head.appendChild(reducedTitleStyle);
+
+  const normalizeTitle = (text) => text.trim().replace(/\s+/g, " ");
+
+  const largeTitles = new Set([
+    "Find your favorite",
+    "New arrivals",
+    "Beautiful things feel more meaningful when shared.",
+    "Our Collections",
+    "A lovely look for your special day.",
+    "Stay close",
+  ]);
+
+  const collectionTitles = new Set([
+    "Elegant Bags",
+    "Girls Collection",
+  ]);
+
+  const productTitles = new Set([
+    "Sorellé Charcoal City Tote",
+    "Sorellé Brown Monogram Lock Satchel",
+    "Pink Bow Party Dress",
+    "Pastel Heart Mini Wallet",
+    "Coquette Bow Accessory Set",
+  ]);
+
+  document.querySelectorAll("h1, h2, h3, h4").forEach((heading) => {
+    const title = normalizeTitle(heading.textContent || "");
+
+    if (largeTitles.has(title)) {
+      heading.classList.add("sorelle-half-large-title");
+    } else if (collectionTitles.has(title)) {
+      heading.classList.add("sorelle-half-collection-title");
+    } else if (productTitles.has(title)) {
+      heading.classList.add("sorelle-half-product-title");
+    }
+  });
 
   const body = document.body;
   const backdrop = document.querySelector(".drawer-backdrop");
