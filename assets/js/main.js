@@ -1,36 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.querySelector(".menu-toggle");
-  const navigation = document.querySelector(".site-navigation");
-  const links = document.querySelectorAll(".site-navigation a");
+  const menuText = document.querySelector(".menu-text");
+  const menu = document.querySelector(".mobile-menu");
+  const closeButton = document.querySelector(".menu-close");
+  const backdrop = document.querySelector(".menu-backdrop");
+  const menuLinks = document.querySelectorAll(".mobile-menu > a");
+  const bottomLinks = document.querySelectorAll(".bottom-nav a");
+  const sections = document.querySelectorAll("main section[id]");
+  const year = document.querySelector("#current-year");
 
-  if (!menuButton || !navigation) return;
+  const setMenuState = (isOpen) => {
+    if (!menuButton || !menu || !backdrop) return;
 
-  const closeMenu = () => {
-    navigation.classList.remove("is-open");
-    document.body.classList.remove("menu-open");
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.textContent = "Menu";
+    menu.classList.toggle("is-open", isOpen);
+    menu.setAttribute("aria-hidden", String(!isOpen));
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("menu-open", isOpen);
+    backdrop.hidden = !isOpen;
+
+    if (menuText) menuText.textContent = isOpen ? "Close" : "Menu";
+    if (isOpen && closeButton) closeButton.focus();
   };
 
-  const openMenu = () => {
-    navigation.classList.add("is-open");
-    document.body.classList.add("menu-open");
-    menuButton.setAttribute("aria-expanded", "true");
-    menuButton.textContent = "Close";
-  };
-
-  menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.contains("is-open");
-    isOpen ? closeMenu() : openMenu();
+  menuButton?.addEventListener("click", () => {
+    setMenuState(!menu.classList.contains("is-open"));
   });
 
-  links.forEach((link) => link.addEventListener("click", closeMenu));
+  closeButton?.addEventListener("click", () => setMenuState(false));
+  backdrop?.addEventListener("click", () => setMenuState(false));
+  menuLinks.forEach((link) => link.addEventListener("click", () => setMenuState(false)));
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeMenu();
+    if (event.key === "Escape") setMenuState(false);
   });
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 760) closeMenu();
+  document.querySelectorAll(".product-details").forEach((details) => {
+    details.addEventListener("toggle", () => {
+      if (!details.open) return;
+      document.querySelectorAll(".product-details[open]").forEach((other) => {
+        if (other !== details) other.open = false;
+      });
+    });
   });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+          bottomLinks.forEach((link) => {
+            link.classList.toggle("active", link.dataset.section === id);
+          });
+        });
+      },
+      { rootMargin: "-25% 0px -60% 0px", threshold: 0.01 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  }
+
+  if (year) year.textContent = String(new Date().getFullYear());
 });

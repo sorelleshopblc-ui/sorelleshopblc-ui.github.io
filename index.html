@@ -2,177 +2,220 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8fb">
   <meta name="description" content="Sorellé Shop — elegant bags, dresses, wallets, accessories, and coquette dress rentals.">
   <title>Sorellé Shop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Sorellé Shop home">
-        <span class="brand-mark" aria-hidden="true">✿</span>
-        <span>Sorellé Shop</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
-      <nav id="site-navigation" class="site-navigation" aria-label="Primary navigation">
-        <a href="#home">Home</a>
-        <a href="#collections">Collections</a>
-        <a href="#bags">Bags</a>
-        <a href="#rental">Dress Rental</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="mobile-header">
+    <a class="brand" href="#home" aria-label="Sorellé Shop home">
+      <span class="brand-mark" aria-hidden="true">✿</span>
+      <span>Sorellé Shop</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="menu-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="menu-text">Menu</span>
+    </button>
   </header>
 
-  <main id="home">
-    <section class="phase-banner">
-      <div class="container phase-layout">
-        <div class="phase-copy">
-          <p class="eyebrow">Website foundation ready</p>
-          <h1>Elegance, tied with a bow.</h1>
-          <p>Sorellé Shop features elegant bags, dresses, wallets, accessories, and a dedicated coquette dress rental collection.</p>
-          <div class="phase-actions">
-            <a class="button button-primary" href="#bags">Shop Bags</a>
-            <a class="button button-secondary" href="#rental">Rental Section</a>
-          </div>
+  <div class="menu-backdrop" hidden></div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Primary navigation" aria-hidden="true">
+    <div class="menu-panel-head">
+      <span>Browse Sorellé</span>
+      <button class="menu-close" type="button" aria-label="Close navigation">×</button>
+    </div>
+    <a href="#home"><span>01</span>Home</a>
+    <a href="#collections"><span>02</span>Collections</a>
+    <a href="#bags"><span>03</span>Bags</a>
+    <a href="#rental"><span>04</span>Dress Rental</a>
+    <a href="#contact"><span>05</span>Contact</a>
+    <div class="menu-contact">
+      <small>Questions or reservations?</small>
+      <a href="mailto:sorelleshopblc@gmail.com">sorelleshopblc@gmail.com</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section id="home" class="hero-section">
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="assets/images/coquette-dress-reference.png" alt="White coquette dress with red ribbon details">
+        <div class="hero-photo-shade"></div>
+        <div class="hero-badge">Coquette collection</div>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Feminine fashion & dress rentals</p>
+        <h1>Elegance,<br>tied with a bow.</h1>
+        <p class="hero-description">Discover elegant bags, romantic dresses, wallets, accessories, and a dedicated coquette rental collection.</p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#bags">Shop available bags</a>
+          <a class="button button-light" href="#rental">Explore dress rental</a>
         </div>
-        <figure class="phase-visual">
-          <img src="assets/images/coquette-dress-reference.png" alt="White coquette dress with red ribbon details">
-          <figcaption>Temporary design reference for the coquette rental collection.</figcaption>
-        </figure>
+
+        <div class="hero-highlights" aria-label="Shop highlights">
+          <div><strong>Curated</strong><span>Feminine pieces</span></div>
+          <div><strong>Local</strong><span>SJDM, Bulacan</span></div>
+          <div><strong>Easy</strong><span>Message to reserve</span></div>
+        </div>
       </div>
     </section>
 
-    <section id="collections" class="section">
-      <div class="container">
-        <p class="eyebrow">Our selling categories</p>
-        <h2>Shop by collection</h2>
-        <div class="category-grid">
-          <article class="category-card"><span>01</span><h3>Elegant Bags</h3><p>Handbags, shoulder bags, mini bags, and everyday totes.</p></article>
-          <article class="category-card"><span>02</span><h3>Dresses</h3><p>Romantic, feminine, and occasion-ready dresses for sale.</p></article>
-          <article class="category-card"><span>03</span><h3>Wallets</h3><p>Compact, classic, and elegant everyday wallets.</p></article>
-          <article class="category-card"><span>04</span><h3>Accessories</h3><p>Hair bows, jewelry, charms, scarves, and feminine accents.</p></article>
-        </div>
+    <section id="collections" class="section collections-section">
+      <div class="section-heading">
+        <p class="eyebrow">Shop your style</p>
+        <h2>Collections</h2>
+        <p>Everything is organized for quick mobile browsing.</p>
+      </div>
+
+      <div class="collection-grid">
+        <a class="collection-card collection-card-featured" href="#bags">
+          <span class="collection-number">01</span>
+          <div><h3>Elegant Bags</h3><p>Totes, shoulder bags, and statement pieces.</p></div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        <article class="collection-card">
+          <span class="collection-number">02</span>
+          <div><h3>Dresses</h3><p>Romantic and occasion-ready styles.</p></div>
+        </article>
+        <article class="collection-card">
+          <span class="collection-number">03</span>
+          <div><h3>Wallets</h3><p>Compact and elegant everyday essentials.</p></div>
+        </article>
+        <article class="collection-card">
+          <span class="collection-number">04</span>
+          <div><h3>Accessories</h3><p>Bows, jewelry, charms, and feminine accents.</p></div>
+        </article>
       </div>
     </section>
 
     <section id="bags" class="section bags-section">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Available bags</p>
-            <h2>Elegant Bags Collection</h2>
-          </div>
-          <p>Two structured statement bags selected for polished everyday style. Message the shop to confirm price, condition, and availability.</p>
-        </div>
+      <div class="section-heading">
+        <p class="eyebrow">Currently available</p>
+        <h2>Bag Collection</h2>
+        <p>Tap an item to review the details, then send an inquiry directly to the shop.</p>
+      </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-image-wrap">
-              <img src="assets/images/bags/sorelle-charcoal-city-tote.jpg" alt="Charcoal gray structured city tote bag with silver-tone hardware" loading="lazy">
-              <span class="product-badge">Available</span>
-            </div>
-            <div class="product-content">
-              <p class="product-code">BAG-001 · Structured Tote</p>
-              <h3>Sorellé Charcoal City Tote</h3>
-              <p class="product-description">A spacious charcoal-gray tote with a fine textured finish, double shoulder handles, side strap accents, silver-tone hardware, and a round hanging charm.</p>
-              <dl class="product-details">
+      <div class="product-list">
+        <article class="product-card">
+          <div class="product-media">
+            <img src="assets/images/bags/sorelle-charcoal-city-tote.jpg" alt="Charcoal gray structured city tote bag with silver-tone hardware" loading="lazy">
+            <span class="status-pill">Available</span>
+            <span class="product-index">01</span>
+          </div>
+          <div class="product-body">
+            <p class="product-code">BAG-001 · Structured Tote</p>
+            <h3>Sorellé Charcoal City Tote</h3>
+            <p class="product-summary">A spacious charcoal-gray tote with a fine textured finish and polished silver-tone hardware.</p>
+
+            <details class="product-details">
+              <summary>View item details <span aria-hidden="true">+</span></summary>
+              <dl>
                 <div><dt>Color</dt><dd>Charcoal gray</dd></div>
                 <div><dt>Style</dt><dd>Large tote / shoulder bag</dd></div>
                 <div><dt>Finish</dt><dd>Textured leather-look exterior</dd></div>
                 <div><dt>Best for</dt><dd>Work, travel, and everyday use</dd></div>
               </dl>
-              <div class="product-footer">
-                <span class="product-price">Message for price</span>
-                <a class="button button-primary product-button" href="mailto:sorelleshopblc@gmail.com?subject=Inquiry%20-%20Sorelle%20Charcoal%20City%20Tote">Inquire Now</a>
-              </div>
-            </div>
-          </article>
+            </details>
 
-          <article class="product-card">
-            <div class="product-image-wrap">
-              <img src="assets/images/bags/sorelle-brown-monogram-lock-satchel.jpg" alt="Brown monogram structured lock satchel with tan trim and gold-tone hardware" loading="lazy">
-              <span class="product-badge">Available</span>
+            <div class="product-actions">
+              <span class="price-label">Message for price</span>
+              <a class="button button-primary" href="mailto:sorelleshopblc@gmail.com?subject=Inquiry%20-%20Sorelle%20Charcoal%20City%20Tote">Inquire now</a>
             </div>
-            <div class="product-content">
-              <p class="product-code">BAG-002 · Top-Handle Satchel</p>
-              <h3>Sorellé Brown Monogram Lock Satchel</h3>
-              <p class="product-description">A structured dark-brown monogram-style satchel with smooth caramel trim, twin top handles, gold-tone hardware, a belted front detail, and a statement padlock charm.</p>
-              <dl class="product-details">
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-media">
+            <img src="assets/images/bags/sorelle-brown-monogram-lock-satchel.jpg" alt="Brown monogram structured lock satchel with tan trim and gold-tone hardware" loading="lazy">
+            <span class="status-pill">Available</span>
+            <span class="product-index">02</span>
+          </div>
+          <div class="product-body">
+            <p class="product-code">BAG-002 · Top-Handle Satchel</p>
+            <h3>Sorellé Brown Monogram Lock Satchel</h3>
+            <p class="product-summary">A structured dark-brown satchel with caramel trim, gold-tone hardware, and a statement padlock charm.</p>
+
+            <details class="product-details">
+              <summary>View item details <span aria-hidden="true">+</span></summary>
+              <dl>
                 <div><dt>Color</dt><dd>Dark brown and caramel</dd></div>
                 <div><dt>Style</dt><dd>Structured top-handle satchel</dd></div>
                 <div><dt>Pattern</dt><dd>Monogram-style exterior</dd></div>
                 <div><dt>Best for</dt><dd>Office, events, and elevated daily wear</dd></div>
               </dl>
-              <div class="product-footer">
-                <span class="product-price">Message for price</span>
-                <a class="button button-primary product-button" href="mailto:sorelleshopblc@gmail.com?subject=Inquiry%20-%20Sorelle%20Brown%20Monogram%20Lock%20Satchel">Inquire Now</a>
-              </div>
+            </details>
+
+            <div class="product-actions">
+              <span class="price-label">Message for price</span>
+              <a class="button button-primary" href="mailto:sorelleshopblc@gmail.com?subject=Inquiry%20-%20Sorelle%20Brown%20Monogram%20Lock%20Satchel">Inquire now</a>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="rental" class="section section-pink">
-      <div class="container rental-layout">
-        <div>
-          <p class="eyebrow">Dedicated rental catalog</p>
-          <h2>Coquette Dress Rental</h2>
-          <p>The rental area will show dress size, rental price, available dates, rental duration, security deposit, and reservation status.</p>
+    <section id="rental" class="section rental-section">
+      <div class="rental-hero">
+        <p class="eyebrow">Coquette dress rental</p>
+        <h2>Reserve your look in four simple steps.</h2>
+        <p>Dress size, rental price, available dates, duration, deposit, and reservation status can all be confirmed directly with the shop.</p>
+      </div>
+
+      <ol class="rental-timeline">
+        <li><span>1</span><div><strong>Choose</strong><p>Select your preferred dress and size.</p></div></li>
+        <li><span>2</span><div><strong>Reserve</strong><p>Send your preferred rental dates.</p></div></li>
+        <li><span>3</span><div><strong>Confirm</strong><p>Wait for availability and payment confirmation.</p></div></li>
+        <li><span>4</span><div><strong>Return</strong><p>Return the dress on the agreed schedule.</p></div></li>
+      </ol>
+
+      <a class="button button-dark" href="mailto:sorelleshopblc@gmail.com?subject=Coquette%20Dress%20Rental%20Inquiry">Ask about dress rental</a>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="contact-card">
+        <p class="eyebrow">Visit or message us</p>
+        <h2>Let’s find your next favorite piece.</h2>
+        <p>Send an email for item availability, pricing, reservations, or rental questions.</p>
+
+        <div class="contact-actions">
+          <a class="contact-row" href="mailto:sorelleshopblc@gmail.com">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <span><small>Email</small><strong>sorelleshopblc@gmail.com</strong></span>
+            <span aria-hidden="true">›</span>
+          </a>
+
+          <a class="contact-row" href="https://www.google.com/maps/search/?api=1&amp;query=V345%2B2PP%2C%20Matahimik%20St%2C%20SJDM%2C%20Bulacan" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon" aria-hidden="true">⌖</span>
+            <span><small>Shop address</small><strong>Area B, Matahimik St., SJDM, Bulacan</strong></span>
+            <span aria-hidden="true">›</span>
+          </a>
         </div>
-        <ol class="rental-steps">
-          <li><strong>Choose</strong><span>Select a dress and size.</span></li>
-          <li><strong>Reserve</strong><span>Choose the rental dates.</span></li>
-          <li><strong>Confirm</strong><span>Wait for shop confirmation.</span></li>
-          <li><strong>Return</strong><span>Return the dress on schedule.</span></li>
-        </ol>
       </div>
     </section>
   </main>
 
-  <section id="contact" class="section contact-section">
-    <div class="container contact-layout">
-      <div class="contact-intro">
-        <p class="eyebrow">Visit or message us</p>
-        <h2>Contact Sorellé Shop</h2>
-        <p>Questions about an item or a coquette dress rental? Send us an email or visit our shop using the address below.</p>
-      </div>
-
-      <div class="contact-card">
-        <div class="contact-item">
-          <span class="contact-label">Email</span>
-          <a href="mailto:sorelleshopblc@gmail.com">sorelleshopblc@gmail.com</a>
-        </div>
-
-        <div class="contact-item">
-          <span class="contact-label">Shop address</span>
-          <address>
-            Purok 6, near BBB Elementary School, beside OX Hotel only,<br>
-            Area B, Matahimik St., SJDM, 3023 Bulacan
-          </address>
-        </div>
-
-        <div class="contact-item">
-          <span class="contact-label">Map pin</span>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=V345%2B2PP%2C%20Matahimik%20St%2C%20SJDM%2C%20Bulacan" target="_blank" rel="noopener noreferrer">
-            V345+2PP, Matahimik St., SJDM, Bulacan
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div><strong>Sorellé Shop</strong><p>Elegant fashion and coquette dress rentals.</p></div>
-      <p><a href="mailto:sorelleshopblc@gmail.com">sorelleshopblc@gmail.com</a></p>
-    </div>
+    <div class="footer-brand"><span aria-hidden="true">✿</span> Sorellé Shop</div>
+    <p>Elegant fashion and coquette dress rentals.</p>
+    <small>© <span id="current-year"></span> Sorellé Shop</small>
   </footer>
+
+  <nav class="bottom-nav" aria-label="Quick navigation">
+    <a class="active" href="#home" data-section="home"><span aria-hidden="true">⌂</span><small>Home</small></a>
+    <a href="#collections" data-section="collections"><span aria-hidden="true">◇</span><small>Shop</small></a>
+    <a href="#bags" data-section="bags"><span aria-hidden="true">▢</span><small>Bags</small></a>
+    <a href="#rental" data-section="rental"><span aria-hidden="true">♡</span><small>Rental</small></a>
+    <a href="#contact" data-section="contact"><span aria-hidden="true">✉</span><small>Contact</small></a>
+  </nav>
 
   <script src="assets/js/main.js"></script>
 </body>
