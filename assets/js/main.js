@@ -49,8 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           const id = entry.target.id;
+          const activeTab = ["collections", "bags", "girls-items", "rental"].includes(id)
+            ? "shop"
+            : id;
+
           bottomLinks.forEach((link) => {
-            link.classList.toggle("active", link.dataset.section === id);
+            link.classList.toggle("active", link.dataset.section === activeTab);
           });
         });
       },
