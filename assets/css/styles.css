@@ -1267,3 +1267,78 @@ summary,
     font-size: clamp(1.55rem, 6.3vw, 2.15rem);
   }
 }
+
+
+/* Final hero image correction: no gradient layer or gradient placeholder */
+.hero-section,
+.hero-media {
+  background: var(--cream) !important;
+  background-image: none !important;
+}
+
+.hero-media::before,
+.hero-media::after,
+.hero-section::before,
+.hero-section::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+.hero-overlay {
+  display: none !important;
+  background: none !important;
+}
+
+.hero-media > img {
+  filter: none !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  object-fit: cover;
+  object-position: center top;
+}
+
+
+/* Hero fit correction: use the actual campaign image and keep all content readable */
+.hero-media {
+  min-height: 0 !important;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden !important;
+  background: var(--cream) !important;
+}
+
+.hero-media > img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 3 / 4;
+  object-fit: cover !important;
+  object-position: center center !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.hero-copy,
+.hero-copy-no-title {
+  position: static !important;
+  inset: auto !important;
+  padding: 30px 24px 36px;
+  background: var(--cream);
+  text-align: center;
+}
+
+.hero-copy-no-title > p:not(.eyebrow) {
+  max-width: 560px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 560px) {
+  .hero-media > img {
+    height: min(78svh, 760px) !important;
+    aspect-ratio: auto;
+    object-fit: cover !important;
+    object-position: center 46% !important;
+  }
+}
