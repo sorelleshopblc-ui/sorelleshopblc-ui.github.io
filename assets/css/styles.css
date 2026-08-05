@@ -11,8 +11,8 @@
   --white: #ffffff;
   --shadow: 0 16px 44px rgba(94, 67, 63, 0.12);
   --shadow-soft: 0 10px 28px rgba(94, 67, 63, 0.08);
-  --display: "Allura", "Brush Script MT", cursive;
-  --body: "Dancing Script", "Segoe Print", cursive;
+  --display: "Playfair Display", Georgia, serif;
+  --body: "Cormorant Garamond", Georgia, serif;
   --header-height: 68px;
   --bottom-nav-height: 72px;
 }
@@ -1134,5 +1134,100 @@ a {
   *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+}
+
+
+/* Playfair Display titles + Cormorant Garamond body */
+body {
+  font-size: 1.08rem;
+  line-height: 1.58;
+}
+
+h1,
+h2,
+h3,
+h4,
+.brand,
+.drawer-title,
+.footer-brand {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+p,
+li,
+dd,
+dt,
+summary,
+.bag-intro,
+.drawer-note p,
+.product-copy p,
+.about-copy p,
+.rental-copy p,
+.contact-art p {
+  font-family: var(--body);
+}
+
+.brand {
+  font-size: clamp(1.55rem, 6.5vw, 2.15rem);
+  line-height: 1.05;
+}
+
+.drawer-title {
+  font-size: 1.75rem;
+}
+
+.hero-copy h1 {
+  font-size: clamp(3.15rem, 14vw, 5.6rem);
+  line-height: 0.95;
+}
+
+.section-heading h2,
+.section-row h2,
+.love-note h2,
+.about-copy h2,
+.rental-copy h2,
+.contact-art h2 {
+  font-size: clamp(2.7rem, 11.5vw, 4.7rem);
+  line-height: 1;
+}
+
+.mini-product-meta h3 {
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.collection-block-heading h3 {
+  font-size: clamp(1.8rem, 7vw, 2.7rem);
+  line-height: 1;
+}
+
+.product-copy h4 {
+  font-size: clamp(1.75rem, 7.5vw, 2.7rem);
+  line-height: 1.08;
+}
+
+.footer-brand {
+  font-size: 2rem;
+}
+
+.hero-copy p:not(.eyebrow),
+.love-note p,
+.about-copy > p:not(.eyebrow),
+.rental-copy > p:not(.eyebrow),
+.contact-art > p:not(.eyebrow) {
+  font-size: 1.14rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 360px) {
+  .brand {
+    font-size: 1.45rem;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.85rem;
   }
 }
