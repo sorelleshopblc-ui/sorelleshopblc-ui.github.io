@@ -382,9 +382,7 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(255,250,245,0.05) 16%, rgba(255,250,245,0.20) 44%, rgba(255,250,245,0.84) 76%, rgba(255,250,245,0.98) 92%),
-    linear-gradient(90deg, rgba(255,248,242,0.14), transparent 62%);
+  background: transparent;
 }
 
 .hero-copy {
@@ -1249,4 +1247,23 @@ summary,
   margin-bottom: 24px;
   font-size: clamp(1.2rem, 5.2vw, 1.55rem);
   line-height: 1.45;
+}
+
+
+/* Update: remove pink hero gradient and slightly reduce dress/wallet title size */
+.hero-media {
+  background: var(--cream);
+}
+
+#dresses .product-copy h4,
+#wallets .product-copy h4 {
+  font-size: clamp(1.7rem, 6.8vw, 2.5rem);
+  line-height: 0.9;
+}
+
+@media (max-width: 420px) {
+  #dresses .product-copy h4,
+  #wallets .product-copy h4 {
+    font-size: clamp(1.55rem, 6.3vw, 2.15rem);
+  }
 }
