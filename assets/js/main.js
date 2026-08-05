@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* Remove the large image/gradient block above the About Sorelle text. */
+  document.querySelector(".about-image")?.remove();
+
   const body = document.body;
   const backdrop = document.querySelector(".drawer-backdrop");
   const menuDrawer = document.querySelector(".menu-drawer");
