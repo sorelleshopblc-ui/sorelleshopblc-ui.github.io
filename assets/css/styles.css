@@ -1231,3 +1231,22 @@ summary,
     font-size: 2.85rem;
   }
 }
+
+
+/* Requested title treatment */
+.playfair-title {
+  font-family: var(--display) !important;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.hero-copy-no-title {
+  bottom: 42px;
+}
+
+.hero-copy-no-title > p:not(.eyebrow) {
+  max-width: 520px;
+  margin-bottom: 24px;
+  font-size: clamp(1.2rem, 5.2vw, 1.55rem);
+  line-height: 1.45;
+}
