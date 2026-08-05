@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f4">
+  <meta name="description" content="Sorellé Shop — feminine bags, dresses, wallets, accessories, and coquette dress rentals.">
+  <title>Sorellé Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="site-shell">
+    <header class="topbar" aria-label="Main header">
+      <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="menu-drawer" aria-label="Open menu">
+        <span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+
+      <a class="brand" href="#home" aria-label="Sorellé Shop home">Sorellé</a>
+
+      <button class="icon-button bag-toggle" type="button" aria-expanded="false" aria-controls="bag-drawer" aria-label="Open inquiry bag">
+        <span class="bag-icon" aria-hidden="true">♧</span>
+        <span class="bag-count" aria-label="0 items">0</span>
+      </button>
+    </header>
+
+    <div class="drawer-backdrop" hidden></div>
+
+    <aside id="menu-drawer" class="side-drawer menu-drawer" aria-hidden="true">
+      <div class="drawer-heading">
+        <span class="drawer-title">Sorellé Menu</span>
+        <button class="drawer-close" type="button" aria-label="Close menu">×</button>
+      </div>
+      <nav class="drawer-links" aria-label="Primary navigation">
+        <a href="#home"><span>01</span>Home</a>
+        <a href="#shop"><span>02</span>Shop</a>
+        <a href="#about"><span>03</span>About</a>
+        <a href="#rental"><span>04</span>Dress Rental</a>
+        <a href="#contact"><span>05</span>Contact</a>
+      </nav>
+      <div class="drawer-note">
+        <span aria-hidden="true">🎀</span>
+        <p>Beautiful little things for every girl.</p>
+      </div>
+    </aside>
+
+    <aside id="bag-drawer" class="side-drawer bag-drawer" aria-hidden="true">
+      <div class="drawer-heading">
+        <span class="drawer-title">Your Inquiry Bag</span>
+        <button class="drawer-close bag-close" type="button" aria-label="Close inquiry bag">×</button>
+      </div>
+      <p class="bag-intro">Save the items you like, then send one inquiry to Sorellé Shop.</p>
+      <div class="bag-items" aria-live="polite"></div>
+      <div class="bag-empty">Your inquiry bag is empty.</div>
+      <a class="button button-primary send-inquiry" href="mailto:sorelleshopblc@gmail.com?subject=Sorelle%20Shop%20Inquiry">Send inquiry</a>
+      <button class="text-button clear-bag" type="button">Clear inquiry bag</button>
+    </aside>
+
+    <main id="main-content">
+      <section id="home" class="hero-section">
+        <div class="hero-media">
+          <img src="assets/images/sorelle-hero-campaign.png" alt="Sorellé campaign photo featuring a girl reading a Sorellé magazine in a soft pink setting" fetchpriority="high">
+          <div class="hero-copy hero-copy-no-title">
+            <p class="eyebrow">Sorellé signature mood</p>
+            <p>Soft pink essentials, feminine pieces, and lovely little details curated for sweet everyday moments.</p>
+            <a class="button button-primary hero-button" href="#shop">Shop collection</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="shop" class="section categories-section">
+        <div class="section-heading centered-heading">
+          <span class="bow-mark" aria-hidden="true">🎀</span>
+          <p class="eyebrow">Shop by category</p>
+          <h2 class="playfair-title">Find your favorite</h2>
+        </div>
+
+        <div class="category-grid">
+          <a class="category-card" href="#bags">
+            <img src="assets/images/bags/sorelle-charcoal-city-tote.jpg" alt="Elegant bags category" loading="lazy">
+            <span>Bags</span>
+          </a>
+          <a class="category-card" href="#dresses">
+            <img src="assets/images/temporary/girls-pink-bow-dress.svg" alt="Girls dresses category" loading="lazy">
+            <span>Dresses</span>
+          </a>
+          <a class="category-card" href="#wallets">
+            <img src="assets/images/temporary/girls-heart-wallet.svg" alt="Girls wallets category" loading="lazy">
+            <span>Wallets</span>
+          </a>
+          <a class="category-card" href="#accessories">
+            <img src="assets/images/temporary/girls-bow-accessory-set.svg" alt="Girls accessories category" loading="lazy">
+            <span>Accessories</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="love-note">
+        <span class="bow-mark" aria-hidden="true">🎀</span>
+        <h2>Made for lovely moments.</h2>
+        <p>Because every girl deserves to feel seen, celebrated, and loved.</p>
+        <a href="#about">Our story <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="section arrivals-section">
+        <div class="section-row">
+          <div>
+            <p class="eyebrow">Freshly added</p>
+            <h2 class="playfair-title">New arrivals</h2>
+          </div>
+          <a href="#all-products">See all</a>
+        </div>
+
+        <div class="mini-product-grid">
+          <article class="mini-product-card">
+            <a href="#bag-001" class="mini-product-image">
+              <img src="assets/images/bags/sorelle-charcoal-city-tote.jpg" alt="Sorellé Charcoal City Tote" loading="lazy">
+            </a>
+            <div class="mini-product-meta">
+              <h3>Sorellé City Tote</h3>
+              <p>Message for price</p>
+              <button class="heart-button add-to-bag" type="button" data-id="bag-001" data-name="Sorellé Charcoal City Tote" data-image="assets/images/bags/sorelle-charcoal-city-tote.jpg" aria-label="Add Sorellé Charcoal City Tote to inquiry bag">♡</button>
+            </div>
+          </article>
+
+          <article class="mini-product-card">
+            <a href="#dresses" class="mini-product-image">
+              <img src="assets/images/temporary/girls-pink-bow-dress.svg" alt="Pink Bow Party Dress" loading="lazy">
+            </a>
+            <div class="mini-product-meta">
+              <h3>Pink Bow Dress</h3>
+              <p>Temporary item</p>
+              <button class="heart-button add-to-bag" type="button" data-id="dress-001" data-name="Pink Bow Party Dress" data-image="assets/images/temporary/girls-pink-bow-dress.svg" aria-label="Add Pink Bow Party Dress to inquiry bag">♡</button>
+            </div>
+          </article>
+
+          <article class="mini-product-card">
+            <a href="#bag-002" class="mini-product-image">
+              <img src="assets/images/bags/sorelle-brown-monogram-lock-satchel.jpg" alt="Sorellé Brown Monogram Lock Satchel" loading="lazy">
+            </a>
+            <div class="mini-product-meta">
+              <h3>Lock Satchel</h3>
+              <p>Message for price</p>
+              <button class="heart-button add-to-bag" type="button" data-id="bag-002" data-name="Sorellé Brown Monogram Lock Satchel" data-image="assets/images/bags/sorelle-brown-monogram-lock-satchel.jpg" aria-label="Add Sorellé Brown Monogram Lock Satchel to inquiry bag">♡</button>
+            </div>
+          </article>
+
+          <article class="mini-product-card">
+            <a href="#accessories" class="mini-product-image">
+              <img src="assets/images/temporary/girls-bow-accessory-set.svg" alt="Coquette Bow Accessory Set" loading="lazy">
+            </a>
+            <div class="mini-product-meta">
+              <h3>Bow Accessory Set</h3>
+              <p>Temporary item</p>
+              <button class="heart-button add-to-bag" type="button" data-id="accessory-001" data-name="Coquette Bow Accessory Set" data-image="assets/images/temporary/girls-bow-accessory-set.svg" aria-label="Add Coquette Bow Accessory Set to inquiry bag">♡</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="about-image">
+          <img src="assets/images/coquette-dress-reference.png" alt="Girl wearing a white coquette dress with red ribbon details" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About Sorellé</p>
+          <h2>Beautiful things feel more meaningful when shared.</h2>
+          <span class="bow-mark" aria-hidden="true">🎀</span>
+          <p>Whether it is a bag for everyday confidence, a dress for a special celebration, or a little gift just because—you deserve pieces that feel like you.</p>
+          <a href="#contact">Meet the shop <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="about-values">
+          <div><span>♡</span><strong>Curated with love</strong></div>
+          <div><span>🎀</span><strong>Thoughtful details</strong></div>
+          <div><span>✿</span><strong>Made for every girl</strong></div>
+        </div>
+      </section>
+
+      <section id="all-products" class="section products-section">
+        <div class="section-heading">
+          <p class="eyebrow">Browse the shop</p>
+          <h2 class="playfair-title">Our Collections</h2>
+          <p>Choose an item, review its details, then add it to your inquiry bag.</p>
+        </div>
+
+        <div id="bags" class="collection-block">
+          <div class="collection-block-heading">
+            <h3 class="playfair-title">Elegant Bags</h3>
+            <span>2 items</span>
+          </div>
+          <div class="product-grid">
+            <article id="bag-001" class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/images/bags/sorelle-charcoal-city-tote.jpg" alt="Charcoal gray structured city tote" loading="lazy">
+                <span class="status-badge">Available</span>
+                <button class="heart-button add-to-bag" type="button" data-id="bag-001" data-name="Sorellé Charcoal City Tote" data-image="assets/images/bags/sorelle-charcoal-city-tote.jpg" aria-label="Add Sorellé Charcoal City Tote to inquiry bag">♡</button>
+              </div>
+              <div class="product-copy">
+                <p class="product-code">BAG-001 · Structured Tote</p>
+                <h4>Sorellé Charcoal City Tote</h4>
+                <p>A spacious charcoal-gray tote with polished silver-tone details for work, travel, and everyday use.</p>
+                <details>
+                  <summary>Item details <span>+</span></summary>
+                  <dl>
+                    <div><dt>Color</dt><dd>Charcoal gray</dd></div>
+                    <div><dt>Style</dt><dd>Large shoulder tote</dd></div>
+                    <div><dt>Finish</dt><dd>Textured leather-look</dd></div>
+                  </dl>
+                </details>
+                <div class="product-actions">
+                  <strong>Message for price</strong>
+                  <button class="button button-primary add-to-bag" type="button" data-id="bag-001" data-name="Sorellé Charcoal City Tote" data-image="assets/images/bags/sorelle-charcoal-city-tote.jpg">Add to inquiry</button>
+                </div>
+              </div>
+            </article>
+
+            <article id="bag-002" class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/images/bags/sorelle-brown-monogram-lock-satchel.jpg" alt="Brown monogram lock satchel" loading="lazy">
+                <span class="status-badge">Available</span>
+                <button class="heart-button add-to-bag" type="button" data-id="bag-002" data-name="Sorellé Brown Monogram Lock Satchel" data-image="assets/images/bags/sorelle-brown-monogram-lock-satchel.jpg" aria-label="Add Sorellé Brown Monogram Lock Satchel to inquiry bag">♡</button>
+              </div>
+              <div class="product-copy">
+                <p class="product-code">BAG-002 · Top-Handle Satchel</p>
+                <h4>Sorellé Brown Monogram Lock Satchel</h4>
+                <p>A structured statement satchel with caramel trim, gold-tone hardware, and a signature lock charm.</p>
+                <details>
+                  <summary>Item details <span>+</span></summary>
+                  <dl>
+                    <div><dt>Color</dt><dd>Dark brown and caramel</dd></div>
+                    <div><dt>Style</dt><dd>Structured top-handle</dd></div>
+                    <div><dt>Best for</dt><dd>Office and events</dd></div>
+                  </dl>
+                </details>
+                <div class="product-actions">
+                  <strong>Message for price</strong>
+                  <button class="button button-primary add-to-bag" type="button" data-id="bag-002" data-name="Sorellé Brown Monogram Lock Satchel" data-image="assets/images/bags/sorelle-brown-monogram-lock-satchel.jpg">Add to inquiry</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="collection-block girls-block">
+          <div class="collection-block-heading">
+            <h3 class="playfair-title">Girls Collection</h3>
+            <span>Temporary catalog</span>
+          </div>
+          <div class="product-grid">
+            <article id="dresses" class="product-card">
+              <div class="product-image-wrap pale-image">
+                <img src="assets/images/temporary/girls-pink-bow-dress.svg" alt="Temporary pink bow party dress" loading="lazy">
+                <span class="status-badge temporary">Temporary</span>
+                <button class="heart-button add-to-bag" type="button" data-id="dress-001" data-name="Pink Bow Party Dress" data-image="assets/images/temporary/girls-pink-bow-dress.svg" aria-label="Add Pink Bow Party Dress to inquiry bag">♡</button>
+              </div>
+              <div class="product-copy">
+                <p class="product-code">DRESS-T01 · Girls Party Dress</p>
+                <h4>Pink Bow Party Dress</h4>
+                <p>A sweet blush-pink dress with a statement bow and soft layered skirt for birthdays and photos.</p>
+                <details>
+                  <summary>Item details <span>+</span></summary>
+                  <dl>
+                    <div><dt>Color</dt><dd>Blush pink</dd></div>
+                    <div><dt>Style</dt><dd>Party dress</dd></div>
+                    <div><dt>Status</dt><dd>Temporary sample</dd></div>
+                  </dl>
+                </details>
+                <div class="product-actions">
+                  <strong>Temporary item</strong>
+                  <button class="button button-primary add-to-bag" type="button" data-id="dress-001" data-name="Pink Bow Party Dress" data-image="assets/images/temporary/girls-pink-bow-dress.svg">Add to inquiry</button>
+                </div>
+              </div>
+            </article>
+
+            <article id="wallets" class="product-card">
+              <div class="product-image-wrap pale-image">
+                <img src="assets/images/temporary/girls-heart-wallet.svg" alt="Temporary pastel heart mini wallet" loading="lazy">
+                <span class="status-badge temporary">Temporary</span>
+                <button class="heart-button add-to-bag" type="button" data-id="wallet-001" data-name="Pastel Heart Mini Wallet" data-image="assets/images/temporary/girls-heart-wallet.svg" aria-label="Add Pastel Heart Mini Wallet to inquiry bag">♡</button>
+              </div>
+              <div class="product-copy">
+                <p class="product-code">WALLET-T01 · Mini Wallet</p>
+                <h4>Pastel Heart Mini Wallet</h4>
+                <p>A compact pink-and-lavender wallet with card slots, coin storage, and a sweet heart detail.</p>
+                <details>
+                  <summary>Item details <span>+</span></summary>
+                  <dl>
+                    <div><dt>Color</dt><dd>Pink and lavender</dd></div>
+                    <div><dt>Style</dt><dd>Compact zip wallet</dd></div>
+                    <div><dt>Status</dt><dd>Temporary sample</dd></div>
+                  </dl>
+                </details>
+                <div class="product-actions">
+                  <strong>Temporary item</strong>
+                  <button class="button button-primary add-to-bag" type="button" data-id="wallet-001" data-name="Pastel Heart Mini Wallet" data-image="assets/images/temporary/girls-heart-wallet.svg">Add to inquiry</button>
+                </div>
+              </div>
+            </article>
+
+            <article id="accessories" class="product-card">
+              <div class="product-image-wrap pale-image">
+                <img src="assets/images/temporary/girls-bow-accessory-set.svg" alt="Temporary coquette bow accessory set" loading="lazy">
+                <span class="status-badge temporary">Temporary</span>
+                <button class="heart-button add-to-bag" type="button" data-id="accessory-001" data-name="Coquette Bow Accessory Set" data-image="assets/images/temporary/girls-bow-accessory-set.svg" aria-label="Add Coquette Bow Accessory Set to inquiry bag">♡</button>
+              </div>
+              <div class="product-copy">
+                <p class="product-code">ACC-T01 · Hair Accessory Set</p>
+                <h4>Coquette Bow Accessory Set</h4>
+                <p>Ribbon bows and pearl-inspired accents for parties, school days, and feminine everyday styling.</p>
+                <details>
+                  <summary>Item details <span>+</span></summary>
+                  <dl>
+                    <div><dt>Colors</dt><dd>Pink, cream, pearl</dd></div>
+                    <div><dt>Includes</dt><dd>Bow clips and hair pins</dd></div>
+                    <div><dt>Status</dt><dd>Temporary sample</dd></div>
+                  </dl>
+                </details>
+                <div class="product-actions">
+                  <strong>Temporary item</strong>
+                  <button class="button button-primary add-to-bag" type="button" data-id="accessory-001" data-name="Coquette Bow Accessory Set" data-image="assets/images/temporary/girls-bow-accessory-set.svg">Add to inquiry</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="rental" class="rental-section">
+        <div class="rental-copy">
+          <p class="eyebrow">Coquette dress rental</p>
+          <h2>A lovely look for your special day.</h2>
+          <p>Choose a dress, send your preferred size and dates, wait for confirmation, then return it on schedule.</p>
+          <a class="button button-primary" href="mailto:sorelleshopblc@gmail.com?subject=Coquette%20Dress%20Rental%20Inquiry">Ask about rental</a>
+        </div>
+        <ol class="rental-steps">
+          <li><span>01</span><strong>Choose</strong></li>
+          <li><span>02</span><strong>Reserve</strong></li>
+          <li><span>03</span><strong>Confirm</strong></li>
+          <li><span>04</span><strong>Return</strong></li>
+        </ol>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="contact-art">
+          <span aria-hidden="true">🎀</span>
+          <h2>Stay close</h2>
+          <p>Be the first to know about new arrivals, dress rentals, and little surprises.</p>
+          <a class="button button-primary" href="mailto:sorelleshopblc@gmail.com?subject=Subscribe%20to%20Sorelle%20Shop%20Updates">Email the shop</a>
+        </div>
+        <div class="contact-details">
+          <a href="mailto:sorelleshopblc@gmail.com"><small>Email</small><strong>sorelleshopblc@gmail.com</strong></a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=V345%2B2PP%2C%20Matahimik%20St%2C%20SJDM%2C%20Bulacan" target="_blank" rel="noopener noreferrer"><small>Visit</small><strong>Area B, Matahimik St., SJDM, Bulacan</strong></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-bow" aria-hidden="true">🎀</div>
+      <div class="footer-brand">Sorellé</div>
+      <p>Elegant fashion and coquette dress rentals.</p>
+      <nav aria-label="Footer links">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <small>© <span id="current-year"></span> Sorellé Shop</small>
+    </footer>
+
+    <nav class="bottom-nav" aria-label="Quick navigation">
+      <a class="active" href="#home" data-section="home"><span aria-hidden="true">⌂</span><small>Home</small></a>
+      <a href="#shop" data-section="shop"><span aria-hidden="true">◇</span><small>Shop</small></a>
+      <a href="#contact" data-section="contact"><span aria-hidden="true">✉</span><small>Contact</small></a>
+    </nav>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
