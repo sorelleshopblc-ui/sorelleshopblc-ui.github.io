@@ -1037,3 +1037,42 @@ h3 {
     animation-duration: 0.01ms !important;
   }
 }
+
+
+/* Temporary girls collection */
+.girls-items-section {
+  background: linear-gradient(180deg, #fffafc 0%, #fff1f6 100%);
+}
+
+.temporary-notice {
+  display: grid;
+  gap: 4px;
+  margin: -4px 0 24px;
+  padding: 16px 18px;
+  border: 1px dashed #d9829e;
+  border-radius: 18px;
+  background: rgba(255,255,255,.72);
+}
+
+.temporary-notice strong {
+  color: var(--rose-dark);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.temporary-notice span {
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.temporary-media img {
+  background: #fff4f8;
+  object-fit: cover;
+}
+
+.status-temporary {
+  background: #fff3f7;
+  color: var(--rose-dark);
+  border: 1px solid #e7a8bb;
+}
